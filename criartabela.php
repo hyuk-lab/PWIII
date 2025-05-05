@@ -13,7 +13,7 @@
         require_once "config.php";
 
       try {
-          $conexao = new PDO("mysql:host=$servidor; dbname=$db", $usuario, $senha);
+          $conexao = new PDO("mysql:host=$servidor;dbname=$db", $usuario, $senha);
           $conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
           $sql = "CREATE TABLE livro(
@@ -29,7 +29,7 @@
 
       } 
           catch (PDOException $e) {
-            echo "A tabela não pode ser criada", getMessage();
+            echo "A tabela não pode ser criada". $e->getMessage();
       }
 
       $conexao = null;

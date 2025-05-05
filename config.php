@@ -3,6 +3,6 @@
     $servidor = "localhost";
     $usuario = "root";
     $senha = "";
-    $db = "teste";
+    $db = "livraria";
 
 ?>
